@@ -47,7 +47,7 @@ export const Profile = () => {
                     <Form.Item name="itemsList" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
                     {item.map((items: string) =>(
                         <Checkbox  key={items}>{items}                       
-                        <Button>X</Button>
+                        <Button onClick={onRemoved(items)}>X</Button>
                         </Checkbox>                        
                     ))}
                     </Form.Item>
