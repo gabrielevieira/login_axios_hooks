@@ -11,10 +11,11 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
     useEffect(() => {
         const user = getUserLocalStorage()
+
         if (user) {
             setUser(user)
         }
-    }, []);
+    },[]);
 
     async function authenticate(email: string, password: string) {
         

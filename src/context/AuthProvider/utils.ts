@@ -13,12 +13,14 @@ export function setUserLocalStorage(user: IUser | null) {
 export function getUserLocalStorage() {
     const json = localStorage.getItem('u')
 
+
     if (!json) {
         return null
     }
 
-    const user = JSON.parse('u')
-
+    
+    const user = JSON.parse(json)
+    
     return user ?? null;
 }
 

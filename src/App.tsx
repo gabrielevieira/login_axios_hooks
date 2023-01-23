@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthProvider';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ProtectedLayout } from './components/ProtectedLayout';
 import { Login } from './components/Login';
+import { Profile } from './components/Profile';
 
 function App() {
   return (
@@ -12,9 +13,8 @@ function App() {
         <Switch>
           <Route path='/profile'>
             <ProtectedLayout>
-              <h1>Olá esse é o componente do Profile !</h1>
+              <Profile/>
             </ProtectedLayout>
-
           </Route>
           <Route path='/login'>
             <Login/>
